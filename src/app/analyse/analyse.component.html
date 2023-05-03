@@ -1,0 +1,86 @@
+<div class="analyse-container">
+	<div class="analyse-profile-info">
+		<div class="profile-image">
+			<img
+				style="border-radius: 150px"
+				width="150"
+				alt="tom"
+				src="assets/tom.png"
+			/>
+		</div>
+		<div class="profile-name">Tom Durand</div>
+	</div>
+	<div class="analyse-graph-container">
+		<div>
+			<h2>Domaines d'expertises</h2>
+			<p>Graphique secteur : Gestion de projet, DevOps, Front, Back, Product</p>
+			<div class="canvas-wrapper">
+				<canvas
+					baseChart
+					class="chart"
+					[data]="pieChartData"
+					[options]="pieChartOptions"
+					[type]="pieChartType"
+				>
+				</canvas>
+			</div>
+		</div>
+		<div>
+			<h2>Compétences globales</h2>
+			<p>
+				Graph rayon : Technique, Gestion de projet, Résolution de problème,
+				Autonomie, Capacité d'analyse, Gestion du temps, Créativité, Leadership,
+			</p>
+			<div class="canvas-wrapper">
+				<canvas
+					baseChart
+					class="chart"
+					[data]="radarChartData"
+					[options]="radarChartOptions"
+					[type]="radarChartType"
+				>
+				</canvas>
+			</div>
+		</div>
+		<div>
+			<h2>Rentabilité de l'employé</h2>
+			<p>graph avec 1 batonnet</p>
+			<p>
+				Si l'employé est rentable, alors le coût de l'employé est inférieur au
+				chiffrage et banonet vert sur la marge
+			</p>
+			<p>
+				Si l'employé n'est pas rentable, alors le coût de l'employé est
+				supérieur au chiffrage et batonnet rouge sur la perte
+			</p>
+			<img width="150" alt="tom" src="assets/performance.png" />
+			<div class="canvas-wrapper">
+				<canvas
+					baseChart
+					class="chart"
+					[data]="barChartData"
+					[options]="barChartOptions"
+					[type]="barChartType"
+				>
+				</canvas>
+			</div>
+			<p>Fonctionnement bi-annuel : 07/21 01/22 07/22 01/23</p>
+			<p>Objectifs sur les projets signés</p>
+		</div>
+		<div>
+			<h2>Satisfaction des clients</h2>
+			<p>Graph jauge (demi-cerlce)</p>
+			<img width="150" alt="tom" src="assets/satisfaction.png" />
+			<div class="canvas-wrapper">
+				<canvas
+					baseChart
+					class="chart"
+					[data]="doughnutChartData"
+					[type]="doughnutChartType"
+					[options]="doughnutChartOptions"
+				>
+				</canvas>
+			</div>
+		</div>
+	</div>
+</div>

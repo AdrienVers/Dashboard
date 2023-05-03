@@ -1,0 +1,244 @@
+<div class="home-container">
+	<h1>Vue d'ensemble</h1>
+	<div class="general-container">
+		<div class="general-presentation">
+			<img
+				style="border-radius: 100px"
+				width="100"
+				alt="tom"
+				src="assets/tom.png"
+			/>
+			<span>TechDesign</span>
+			<span>Paris</span>
+		</div>
+		<div class="general-stats">
+			<div class="general-stat">
+				<span>Satisfaction clients</span>
+				<div class="circle-wrap">
+					<div class="circle">
+						<div class="mask full" style="transform: rotate(157deg)">
+							<div class="fill" style="transform: rotate(157deg)"></div>
+						</div>
+						<div class="mask half">
+							<div class="fill" style="transform: rotate(157deg)"></div>
+						</div>
+						<div class="inside-circle">87%</div>
+					</div>
+				</div>
+				<span>2023-Q1</span>
+			</div>
+			<div class="general-stat">
+				<span>Satisfaction salariés</span>
+				<div class="circle-wrap">
+					<div class="circle">
+						<div class="mask full" style="transform: rotate(147deg)">
+							<div class="fill" style="transform: rotate(147deg)"></div>
+						</div>
+						<div class="mask half">
+							<div class="fill" style="transform: rotate(147deg)"></div>
+						</div>
+						<div class="inside-circle">82%</div>
+					</div>
+				</div>
+				<span>2023-Q1</span>
+			</div>
+			<div class="general-stat">
+				<span>Chiffre d'affaires</span>
+				<div class="circle-wrap">
+					<div class="circle">
+						<div class="mask full" style="transform: rotate(40deg)">
+							<div class="fill" style="transform: rotate(40deg)"></div>
+						</div>
+						<div class="mask half">
+							<div class="fill" style="transform: rotate(40deg)"></div>
+						</div>
+						<div class="inside-circle">1,3M€</div>
+					</div>
+				</div>
+				<span>2023-Q1</span>
+			</div>
+		</div>
+	</div>
+	<h1>Finances</h1>
+	<div class="finance-container">
+		<div class="finance-tab-container">
+			<table>
+				<tr class="tr-header">
+					<th class="tr-header">Performance</th>
+					<td>2019</td>
+					<td>2020</td>
+					<td>2021</td>
+					<td>2022</td>
+					<td>2023</td>
+				</tr>
+				<tr>
+					<th>CA initialement prévu (€)</th>
+					<td>1,7M</td>
+					<td>2,6M</td>
+					<td>3,0M</td>
+					<td>3,9M</td>
+					<td>5,8M</td>
+				</tr>
+				<tr>
+					<th>Chiffre d'affaires (€)</th>
+					<td>2,0M</td>
+					<td>2,5M</td>
+					<td>3,8M</td>
+					<td>4,2M</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>Marge brute (€)</th>
+					<td>1,0M</td>
+					<td>1,3M</td>
+					<td>2,0M</td>
+					<td>2,4M</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>EBITDA - EBE (€)</th>
+					<td>0,6M</td>
+					<td>0,8M</td>
+					<td>1,3M</td>
+					<td>1,6M</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>Résultat d'exploitation (€)</th>
+					<td>0,4M</td>
+					<td>0,6M</td>
+					<td>1,0M</td>
+					<td>1,3M</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>Résultat net (€)</th>
+					<td>0,3M</td>
+					<td>0,5M</td>
+					<td>0,8M</td>
+					<td>1,0M</td>
+					<td></td>
+				</tr>
+				<tr class="tr-header">
+					<th class="tr-header">Croissance</th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+				<tr>
+					<th>Taux de marge d'EBITDA (%)</th>
+					<td>30%</td>
+					<td>32%</td>
+					<td>34%</td>
+					<td>38%</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>Taux des capitaux propres (%)</th>
+					<td>40%</td>
+					<td>42%</td>
+					<td>45%</td>
+					<td>48%</td>
+					<td></td>
+				</tr>
+				<tr class="tr-header">
+					<th class="tr-header">Gestion BFR</th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+				<tr>
+					<th>BFR (€)</th>
+					<td>0,5M</td>
+					<td>0,6M</td>
+					<td>0,8M</td>
+					<td>0,9M</td>
+					<td></td>
+				</tr>
+				<!-- <tr *ngFor="let ligne of tableau"> -->
+				<!-- <td *ngFor="let cellule of ligne">{{ cellule }}</td> -->
+				<!-- </tr> -->
+			</table>
+		</div>
+		<div class="finance-graph-container">
+			<div class="canvas-wrapper">
+				<canvas
+					baseChart
+					class="chart"
+					[data]="lineChartData"
+					[options]="lineChartOptions"
+					[type]="lineChartType"
+				>
+				</canvas>
+			</div>
+		</div>
+	</div>
+	<h1>Gestion des projets</h1>
+	<div class="projects-container">
+		<div class="projects-graph-container">
+			<div class="canvas-wrapper">
+				<canvas
+					baseChart
+					class="chart"
+					[data]="barChartData"
+					[options]="barChartOptions"
+					[type]="barChartType"
+				>
+				</canvas>
+			</div>
+		</div>
+		<div class="projects-tab-container">
+			<span>Tableau</span>
+		</div>
+	</div>
+	<h1>Gestions des équipes</h1>
+	<div class="team-container">
+		<div class="table-container">
+			<div class="table">
+				<div class="thread">
+					<div class="td">Nom</div>
+					<div class="td">Fonction</div>
+					<div class="td">Ancienneté</div>
+					<div class="td">Contact</div>
+					<div class="td">Détails</div>
+				</div>
+			</div>
+			<div class="tbody">
+				<div class="tr">
+					<div class="td">Tom Durand</div>
+					<div class="td">CTO</div>
+					<div class="td">5 ans</div>
+					<div class="td">07 45 87 48 65</div>
+					<div class="td">(-)</div>
+				</div>
+				<div class="tr">
+					<div class="td">Hugo Antolin</div>
+					<div class="td">Lead Dev</div>
+					<div class="td">4 ans</div>
+					<div class="td">06 78 27 55 29</div>
+					<div class="td">(-)</div>
+				</div>
+				<div class="tr">
+					<div class="td">Lucy Maria</div>
+					<div class="td">Product Owner</div>
+					<div class="td">2 ans</div>
+					<div class="td">06 43 26 23 44</div>
+					<div class="td">(-)</div>
+				</div>
+				<div class="tr">
+					<div class="td">Daniel Erfang</div>
+					<div class="td">Front Dev</div>
+					<div class="td">1 ans</div>
+					<div class="td">06 94 29 72 15</div>
+					<div class="td">(-)</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<router-outlet></router-outlet>

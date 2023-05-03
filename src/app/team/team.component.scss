@@ -1,0 +1,113 @@
+.team-container {
+	width: 100%;
+	// background-color: red;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.table-container {
+		display: block;
+		width: 90%;
+		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+		border-radius: 5px;
+
+		@media (max-width: 750px) {
+			box-shadow: none;
+		}
+
+		.tr {
+			display: flex;
+			width: 100%;
+			background-color: rgb(255, 255, 255);
+			border-radius: 2px;
+
+			@media (max-width: 750px) {
+				display: block;
+				margin-bottom: 25px;
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+			}
+		}
+
+		.tr:nth-last-of-type(odd) {
+			background-color: rgb(240, 240, 240);
+
+			@media (max-width: 750px) {
+				background-color: rgb(255, 255, 255);
+			}
+		}
+
+		.td {
+			width: 20%;
+			// border: 1px solid black;
+			text-align: center;
+			padding: 10px 0px;
+
+			@media (max-width: 750px) {
+				// background-color: black;
+				display: flex;
+				width: 100%;
+				text-align: left;
+
+				&:before {
+					font-weight: bold;
+					display: block;
+					width: 50%;
+					padding-left: 10px;
+				}
+
+				&:nth-of-type(1) {
+					content: "Name";
+					background-color: mediumpurple;
+					color: white;
+					font-weight: bold;
+				}
+
+				&:nth-of-type(1):before {
+					content: "Nom";
+				}
+
+				&:nth-of-type(2):before {
+					content: "Fonction";
+				}
+
+				&:nth-of-type(3):before {
+					content: "Ancienneté";
+				}
+
+				&:nth-of-type(4):before {
+					content: "Contact";
+				}
+
+				&:nth-of-type(5):before {
+					content: "Description";
+				}
+			}
+		}
+
+		.thread {
+			display: flex;
+			// background-color: mediumpurple;
+			background-color: rgb(48, 50, 53);
+			color: white;
+			width: 100%;
+			border-radius: 2px;
+			font-weight: 500;
+
+			@media (max-width: 750px) {
+				display: none;
+			}
+		}
+
+		.tbody {
+			.tr {
+				&:hover {
+					background-color: rgb(225, 225, 225);
+					cursor: pointer;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}

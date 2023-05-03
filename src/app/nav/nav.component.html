@@ -1,0 +1,77 @@
+<header>
+	<nav class="nav-container">
+		<div class="nav-links">
+			<div class="nav-item" [routerLinkActive]="['link-active']">
+				<a class="nav-link" [routerLink]="['/']">
+					<span>Tableau de bord</span></a
+				>
+			</div>
+		</div>
+		<div class="nav-account">
+			<div class="nav-item" [routerLinkActive]="['link-active']">
+				<a class="nav-link" [routerLink]="['/']">
+					<img
+						style="border-radius: 40px"
+						width="40"
+						alt="tom"
+						src="assets/tom.png"
+					/>
+					<span>Tom Durand</span></a
+				>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<!-- 
+	<header>
+	<nav class="nav-container">
+		<div class="nav-content">
+			<div class="nav-links" [ngClass]="{ show: isExpanded }">				
+				<div
+					class="nav-item"
+					[routerLinkActive]="['link-active']"
+					[routerLinkActiveOptions]="{ exact: true }"
+				>
+					<a class="nav-link" [routerLink]="['/']">Accueil</a>
+				</div>
+				<div
+					class="nav-item"
+					[routerLinkActive]="['link-active']"
+					[routerLinkActiveOptions]="{ exact: true }"
+				>
+					<a class="nav-link" [routerLink]="['/team']">Équipe</a>
+				</div>
+				<div
+					class="nav-item"
+					[routerLinkActive]="['link-active']"
+					[routerLinkActiveOptions]="{ exact: true }"
+				>
+					<a class="nav-link" [routerLink]="['/analyse']">Analyse</a>
+				</div>
+				<div
+					class="nav-item"
+					[routerLinkActive]="['link-active']"
+					[routerLinkActiveOptions]="{ exact: true }"
+				>
+					<a class="nav-link" [routerLink]="['/projects']">Projets</a>
+				</div>
+			</div>
+			<div class="nav-account">
+				<div class="nav-item" [routerLinkActive]="['link-active']">
+					<a class="nav-link" [routerLink]="['/']">
+						<img
+							style="border-radius: 40px"
+							width="40"
+							alt="tom"
+							src="assets/tom.png"
+						/>
+						<span>Tom Durand</span></a
+					>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+ -->

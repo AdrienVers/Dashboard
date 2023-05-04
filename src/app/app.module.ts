@@ -13,6 +13,8 @@ import { OverviewComponent } from "./home/components/overview/overview.component
 import { HomeFinancesComponent } from "./home/components/home-finances/home-finances.component";
 import { HomeProjectsComponent } from "./home/components/home-projects/home-projects.component";
 import { ProjectsComponent } from "./projects/projects.component";
+import { PresentationComponent } from "./home/components/overview/components/presentation/presentation.component";
+import { StatisticsComponent } from "./home/components/overview/components/statistics/statistics.component";
 
 @NgModule({
 	declarations: [
@@ -20,6 +22,8 @@ import { ProjectsComponent } from "./projects/projects.component";
 		NavComponent,
 		HomeComponent,
 		OverviewComponent,
+		PresentationComponent,
+		StatisticsComponent,
 		HomeFinancesComponent,
 		HomeProjectsComponent,
 		TeamComponent,

@@ -14,7 +14,7 @@ export class HomeProjectsComponent {
 		],
 	};
 	barChartOptions = {
-		responsive: false,
+		responsive: true,
 	};
 	barChartType: any = "bar";
 }

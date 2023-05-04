@@ -16,7 +16,7 @@ export class HomeFinancesComponent {
 			{
 				data: [2.0, 2.5, 3.8, 4.2],
 				label: "Chiffre d'affaires (M €)",
-				backgroundColor: "rgba(77,83,96,0.2)",
+				backgroundColor: "rgba(12, 200, 128, 0.6)",
 				borderColor: "rgba(77,83,96,1)",
 				pointBackgroundColor: "rgba(77,83,96,1)",
 				pointBorderColor: "#fff",
@@ -25,7 +25,7 @@ export class HomeFinancesComponent {
 			{
 				data: [2.0, 2.5, 3.8, 4.2, 5.8],
 				label: "CA prévu (M €)",
-				backgroundColor: "rgba(77,83,96,0.2)",
+				backgroundColor: "rgba(12, 200, 128, 0.2)",
 				borderColor: "rgba(77,83,96,1)",
 				pointBackgroundColor: "rgba(77,83,96,1)",
 				pointBorderColor: "#fff",

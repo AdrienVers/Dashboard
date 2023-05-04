@@ -12,6 +12,22 @@
 		</div>
 	</div>
 	<div class="projects-tab-container">
-		<span>Tableau</span>
+		<table>
+			<ng-container *ngFor="let section of data; let i = index">
+				<tr class="tr-header">
+					<th class="tr-header">{{ section.header }}</th>
+					<ng-container *ngIf="i === 0">
+						<td *ngFor="let year of years">{{ year }}</td>
+					</ng-container>
+					<ng-container *ngIf="i !== 0">
+						<td *ngFor="let item of empty">{{ item }}</td>
+					</ng-container>
+				</tr>
+				<tr *ngFor="let row of section.rows">
+					<th>{{ row.label }}</th>
+					<td *ngFor="let value of row.values">{{ value }}</td>
+				</tr>
+			</ng-container>
+		</table>
 	</div>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { PROJECTS_DATA } from "./projectsDatas";
 
 @Component({
 	selector: "[app-home-projects]",
@@ -6,11 +7,36 @@ import { Component } from "@angular/core";
 	styleUrls: ["./home-projects.component.scss"],
 })
 export class HomeProjectsComponent {
+	data = PROJECTS_DATA;
+	years = ["2019", "2020", "2021", "2022", "2023", "Total"];
+	empty = ["", "", "", "", "", ""];
+
+	chiffrageData = [70, 125, 80, 63, 98];
+	coutsData = [15, 45, 70, 78, 48];
+
+	generateBackgroundColors() {
+		return this.coutsData.map((cout, index) => {
+			if (cout > this.chiffrageData[index]) {
+				return "rgba(255, 0, 0, 0.8)"; // Rouge
+			} else {
+				return "rgba(12, 200, 128, 0.8)"; // Couleur initiale (vert)
+			}
+		});
+	}
+
 	barChartData = {
-		labels: ["05/21", "11/21", "05/22", "11/22", "05/23", "11/23"],
+		labels: ["P35", "P37", "P43", "P44", "P45"],
 		datasets: [
-			{ data: [40, 41, 44, 46, 48, 50, 52], label: "Pertes" },
-			{ data: [28, 68, 55, 79, 86, 90, 102], label: "Bénéfices" },
+			{
+				data: this.chiffrageData,
+				label: "Chiffrage",
+				backgroundColor: "rgba(200, 200, 200, 0.8)",
+			},
+			{
+				data: this.coutsData,
+				label: "Coûts",
+				backgroundColor: this.generateBackgroundColors(),
+			},
 		],
 	};
 	barChartOptions = {
